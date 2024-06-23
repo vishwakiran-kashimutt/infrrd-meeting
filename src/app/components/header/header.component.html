@@ -1,0 +1,13 @@
+<div class="header-section" *ngIf="approved">
+    <div class="logo">
+        BOOK A MEETING
+    </div>
+    <div class="profile-section">
+        <span>
+            {{user}}
+        </span>
+        <span *ngIf="user" (click)="logout()" class="logout">
+            logout
+        </span>
+    </div>
+</div>

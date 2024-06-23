@@ -1,0 +1,143 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Hello World",
+      "author": "John Doe"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "Alice",
+      "password": "Password123",
+      "role": "manager",
+      "userId": 111
+    },
+    {
+      "id": 2,
+      "name": "Bob",
+      "password": "Password123",
+      "role": "employee",
+      "userId": 112
+    },
+    {
+      "id": 3,
+      "name": "Kiran",
+      "password": "Password123",
+      "role": "manager",
+      "userId": 113
+    },
+    {
+      "id": 4,
+      "name": "shashank",
+      "password": "Password123",
+      "role": "manager",
+      "userId": 114
+    },
+    {
+      "id": 5,
+      "name": "vinay",
+      "password": "Password123",
+      "role": "manager",
+      "userId": 115
+    }
+  ],
+  "booking": [
+    {
+      "userName": "vinay",
+      "date": "2024-06-23",
+      "time": "18:00-18:00",
+      "room": 1002,
+      "agenda": "Conference",
+      "userId": 111,
+      "id": 14
+    },
+    {
+      "userName": "Alice",
+      "date": "2024-06-23",
+      "time": "06:58-06:59",
+      "room": 1001,
+      "agenda": "Testing software product",
+      "userId": 111,
+      "id": 15
+    },
+    {
+      "userName": "Alice",
+      "date": "2024-06-29",
+      "time": "19:18-19:19",
+      "room": 1001,
+      "agenda": "Appraisal",
+      "userId": 111,
+      "id": 16
+    },
+    {
+      "userName": "Alice",
+      "date": "2024-06-23",
+      "time": "19:26-19:26",
+      "room": 1001,
+      "agenda": "Town hall meeting",
+      "userId": 111,
+      "id": 17
+    },
+    {
+      "userName": "Alice",
+      "date": "2024-06-23",
+      "time": "19:26-19:26",
+      "room": 1001,
+      "agenda": "Sceret santa",
+      "userId": 111,
+      "id": 18
+    },
+    {
+      "userName": "Kiran",
+      "date": "2024-06-15",
+      "time": "07:55-19:56",
+      "room": 1001,
+      "agenda": "Interview L1",
+      "userId": 111,
+      "id": 19
+    },
+    {
+      "userName": "Vishwakiran",
+      "date": "2024-06-22",
+      "time": "19:03-19:04",
+      "room": 1001,
+      "agenda": "Interview L2",
+      "userId": 111,
+      "id": 20
+    },
+    {
+      "userName": "Akshay",
+      "date": "2024-06-14",
+      "time": "20:45-20:45",
+      "room": 1001,
+      "agenda": "One to One",
+      "userId": 114,
+      "id": 21
+    },
+    {
+      "userName": "Bharath",
+      "date": "2024-06-23",
+      "time": "02:00-02:30",
+      "room": 1003,
+      "agenda": "Goal setting",
+      "userId": 114,
+      "id": 22
+    }
+  ],
+  "rooms": [
+    {
+      "roomName": "Room 1",
+      "roomId": 1001
+    },
+    {
+      "roomName": "Room 2",
+      "roomId": 1002
+    },
+    {
+      "roomName": "Room 3",
+      "roomId": 1003
+    }
+  ]
+}

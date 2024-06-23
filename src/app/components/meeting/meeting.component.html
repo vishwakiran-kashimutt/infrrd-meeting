@@ -1,0 +1,39 @@
+<form [formGroup]="meetingForm" (ngSubmit)="onSubmit()" class="form-container">
+    <div class="form-item">
+      <label for="username">User Name</label>
+      <div class="input-user-name">
+        <input id="username" formControlName="username" />
+      </div>
+    </div>
+  
+    <div class="date-time-section">
+      <div class="form-item">
+        <label for="meetingDate">Meeting Date</label>
+        <input id="meetingDate" type="date" formControlName="meetingDate" />
+      </div>
+    
+      <div class="form-item">
+        <label for="startTime">Start Time</label>
+        <input id="startTime" type="time" step="1800" formControlName="startTime"/>
+      </div>
+    
+      <div class="form-item">
+        <label for="endTime">End Time</label>
+        <input id="endTime" type="time" step="1800" formControlName="endTime" />
+      </div>
+    </div>
+  
+    <div class="form-item">
+      <label for="room">Room</label>
+      <select id="room" formControlName="room">
+        <option *ngFor="let room of rooms" [value]="room.roomId">{{ room.roomName }}</option>
+      </select>
+    </div>
+  
+    <div class="form-item">
+      <label for="agenda">Agenda</label>
+      <textarea id="agenda" formControlName="agenda"></textarea>
+    </div>
+  
+    <button type="submit" [disabled]="meetingForm.invalid" class="cta submit-cta">Submit</button>
+  </form>

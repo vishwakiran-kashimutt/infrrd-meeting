@@ -1,0 +1,16 @@
+.header-section {
+    border-bottom: 1px solid black;
+    padding: 5px;
+    margin: 20px 0;
+    .logo {
+        text-transform: capitalize;
+    }
+    .profile-section  {
+        display: flex;
+        justify-content: end;
+        column-gap: 10px;
+        .logout {
+            cursor: pointer;
+        }
+    }
+}

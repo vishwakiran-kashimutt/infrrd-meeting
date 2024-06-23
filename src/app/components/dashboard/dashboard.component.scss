@@ -1,0 +1,20 @@
+.container {
+    .user-meeting-section {
+        margin-top: 20px;
+        padding: 20px;
+        .user-meeting-container{
+            .user-meeting-table {
+                width: 800px;
+                border: 1px solid black;
+                margin-top: 20px;
+                tbody {
+                    text-align: center;
+                }
+            }
+          }
+    }
+    .meeting-room-container {
+        margin-top: 20px;
+        padding: 20px;
+    }
+}

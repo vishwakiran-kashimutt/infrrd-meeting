@@ -1,0 +1,41 @@
+<div class="container">
+    <div>
+        <button (click)="openModal()" class="cta">Book Meeting</button>
+    </div>
+    <div class="user-meeting-section">
+            
+        <div class="user-meeting-container">
+          Your upcoming meetings
+            <table border="0" class="user-meeting-table">
+                <thead>
+                  <tr>
+                    <th>Sr No</th>
+                    <th>Username</th>
+                    <th>Agenda</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Room</th>
+                  </tr>
+                </thead>
+                <tbody class="table-body">
+                        <tr *ngFor="let entry of agendaEntries; let i = index">
+                            <td> {{ i+1}}</td>
+                            <td>{{ entry.userName }}</td>
+                            <td>{{ entry.agenda }}</td>
+                            <td>{{ entry.date }}</td>
+                            <td>{{ entry.time }}</td>
+                            <td>{{ entry.room }}</td>
+                          </tr>
+                  
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="meeting-room-container">
+      <app-room-details></app-room-details>
+    </div>
+</div>
+<app-modal #modal>
+    <h2>Book Meeting</h2>
+    <app-meeting (submittedStatus)="getSubmitStatus($event)"></app-meeting>
+  </app-modal>

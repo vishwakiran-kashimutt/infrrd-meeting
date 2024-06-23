@@ -1,0 +1,37 @@
+<div class="meeting-section">
+    <div>
+        <h2>Room Meetings Details</h2>
+    </div>
+    <div>
+        <label for="roomFilter">Select Meeting room</label>
+        <div>
+            <select id="roomFilter" (change)="onRoomChange($event)" class="room-dropdown">
+                <option *ngFor="let room of allRooms" [value]="room.roomId">{{ room.roomName }}</option>
+              </select>
+        </div>
+      </div>
+      
+      <table class="meeting-room-table">
+        <thead>
+          <tr>
+            <th>Sr No</th>
+            <th>Username</th>
+            <th>Agenda</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th>Room Number</th>
+          </tr>
+        </thead>
+        <tbody *ngIf="getFilteredMeetings().length > 0">
+          <tr *ngFor="let meeting of getFilteredMeetings(); let i=index">
+            <td>{{  i + 1 }}</td>
+            <td>{{ meeting.userName }}</td>
+            <td>{{ meeting.agenda }}</td>
+            <td>{{ meeting.date }}</td>
+            <td>{{ meeting.time }}</td>
+            <td>{{meeting.room}} </td>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>

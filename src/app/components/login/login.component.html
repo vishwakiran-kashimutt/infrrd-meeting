@@ -1,0 +1,21 @@
+<div class="login-form-section">
+    <div class="booking-title">
+        BOOK A MEETING ROOM
+    </div>
+    <div>
+        <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+            <div class="user-name-section">
+                <label for="username">User Name</label>
+            <input id="username" formControlName="username" placeholder="User Name">
+            </div>
+            <div class="password-section">
+                <label for="password">password</label>
+            <input id="password" formControlName="password" placeholder="password" type="password">
+            </div>
+            <button type="submit" class="cta">Login</button>
+        </form>
+        <div *ngIf="error.errorMessage != ''" class="error-message">
+            {{error.errorMessage}}
+        </div>
+    </div>
+</div>
