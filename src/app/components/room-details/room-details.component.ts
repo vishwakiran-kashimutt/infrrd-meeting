@@ -17,23 +17,32 @@ export class RoomDetailsComponent implements OnInit {
   meetings: BookingDetails[] = [];
   existingRooms: string[] = [];
   currentRoomBooking: BookingDetails[] = [];
-  allRooms: Rooms[] = [];
+  allRooms: Rooms[] = [
+    {
+      "roomName": "Room 1",
+      "roomId": 1001
+    },
+    {
+      "roomName": "Room 2",
+      "roomId": 1002
+    },
+    {
+      "roomName": "Room 3",
+      "roomId": 1003
+    }
+  ];
   // currentUserBookings: BookingDetails[] =[]
   constructor(
     private userMeetingService: UserMeetingService,
     private dataService: DataService
   ) {}
   ngOnInit() {
-    this.userMeetingService.getAllRoomDetails();
     this.userMeetingService.booking$.subscribe({
       next: (response: any) => {
         this.meetings = response;
-        this.userMeetingService.getAllRooms().subscribe((resp) => {
-          this.allRooms = resp;
-          this.selectedRoom = resp[0].roomId;
+          this.selectedRoom = this.allRooms[0].roomId;
           this.getFilteredMeetings();
           this.getUserBookingDetails();
-        });
       },
       error: (error) => {},
     });
@@ -73,7 +82,9 @@ export class RoomDetailsComponent implements OnInit {
         currentUserBooking.push(meeting);
       }
     });
-    this.userMeetingService.addMeeting(currentUserBooking);
+    if(currentUserBooking.length>0) {
+    // this.userMeetingService.addMeeting(currentUserBooking);
     this.dataService.setCurrentUserMeetingDetails(currentUserBooking);
+    }
   }
 }

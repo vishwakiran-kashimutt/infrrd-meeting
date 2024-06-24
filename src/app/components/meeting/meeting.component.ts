@@ -55,8 +55,10 @@ export class MeetingComponent {
     }
     this.userMeetingServie.bookMeetings(booking).subscribe({
       next: ((response: any)=> {
+        if(Object.keys(response).length>0) {
         this.userMeetingServie.addMeeting(response);
         this.sendStatus()
+        }
       })
     })
   }
